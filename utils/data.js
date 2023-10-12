@@ -21,3 +21,28 @@ export const listData = [
       "Due to our nature to thrive to be the best, we will continuously look for improvements that help our clients and our team.",
   },
 ];
+
+export const listDataII = [
+  {
+    pic: "/images/across_the_uk.png",
+    heading: "Across the uk",
+    details:
+      "We source for products that provide the highest return over a long run.",
+  },
+  {
+    pic: "/images/accumulate.png",
+    heading: "Accumulate property portfolio",
+    details: "Manage your portfolio through us, autonomous wealth growth.",
+  },
+  {
+    pic: "/images/joint_venture.png",
+    heading: "Joint venture",
+    details: "A collaborative use of business acumen to prosper.",
+  },
+  {
+    pic: "/images/andragogy.png",
+    heading: "Andragogy",
+    details:
+      "Complete transparent transaction, understanding the know-how of your investment.",
+  },
+];

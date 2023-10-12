@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Roboto_Condensed, Roboto } from "next/font/google";
-import { listData } from "@/utils/data";
+import { listData, listDataII } from "@/utils/data";
 
 const roboto_condensed = Roboto_Condensed({
   subsets: ["latin"],
@@ -40,7 +40,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="h-[70vh] p-6 grid place-content-center text-myBlue text-center gap-8">
+      <div className="min-h-[70vh] p-6 grid place-content-center text-myBlue text-center gap-8">
         <h2 className="uppercase tracking-wider m-auto max-w-[70%]">
           Comfortable property investment
         </h2>
@@ -52,7 +52,7 @@ export default function Home() {
 
       <div className="bg-[#F9F7F5] cutCorner-two py-8">
         <div
-          className={`${roboto_condensed.className} text-myBlue grid p-6 gap-4 h-[100vh] place-content-center`}
+          className={`${roboto_condensed.className} text-myBlue grid p-6 gap-4 min-h-[100vh] place-content-center`}
         >
           <span className="w-[10vw] h-[2px] bg-myBlue"></span>
           <h2 className="uppercase text-[2.6rem] m-auto w-[90%] font-light text-center leading-[3.1rem]">
@@ -103,11 +103,82 @@ export default function Home() {
           {listData.map(({ pic, heading, details }) => (
             <li className="grid gap-4 text-myBlue">
               <img src={pic} alt={heading} className="m-auto" />
-              <h3 className={`${roboto_condensed.className} uppercase font tracking-wide`}>{heading}</h3>
+              <h3
+                className={`${roboto_condensed.className} uppercase font tracking-wide`}
+              >
+                {heading}
+              </h3>
               <p className="w-[95%] m-auto">{details}</p>
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="text-myBlue grid p-2 gap-4 min-h-screen place-content-center">
+        <span className="bg-myBlue w-[12vw] h-[1px] ml-2"></span>
+        <h3
+          className={`${roboto_condensed.className} text-center text-[2.3rem] uppercase pt-4 pb-6 tracking-wider`}
+        >
+          Who are we
+        </h3>
+        <span className="bg-myBlue w-[33vw] h-[3px] ml-2 mb-[3vh]"></span>
+        <img
+          src="/images/architectural-building-design-8X4V44H-768x512.jpg"
+          alt="architectural building design"
+        />
+
+        <p className="mt-[8vh]">
+          As a specialised property investment company, our clients are at heart
+          with every service and deal we provide. Our team is resourceful in the
+          due diligence, competence and objectivity.
+          <br />
+          <br />
+          Regardless of your background, be it an experienced investor or new to
+          the property market, we have suitable deals that will help your
+          portfolio with the boost that you sought to gain.
+        </p>
+      </div>
+
+      <div
+        className={`${roboto.className} text-myBlue grid p-2 gap-4 min-h-screen place-content-center text-center`}
+      >
+        <span className="bg-myBlue h-[2px] w-[10vw] ml-[2em]"></span>
+        <h3
+          className={`${roboto_condensed.className} text-center text-[2.3rem] uppercase w-[90%] m-auto tracking-wider mb-[1em]`}
+        >
+          Services we offer
+        </h3>
+        <ul className="flex flex-col justify-center items-center gap-[8vh]">
+          {listDataII.map(({ pic, heading, details }) => (
+            <li className="grid gap-4 text-myBlue">
+              <img src={pic} alt={heading} className="m-auto" />
+              <h3
+                className={`${roboto_condensed.className} uppercase font-extrabold tracking-wide`}
+              >
+                {heading}
+              </h3>
+              <p className="w-[95%] m-auto">{details}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="min-h-[40h] items-center overflow-scroll grid grid-flow-col auto-cols-[28%] gap-[30vw] p-4">
+        <img
+          src="/images/ico.png"
+          alt="Information Commissioner's Office"
+          
+        />
+        <img
+          src="/images/prs.png"
+          alt="Property Redress Scheme"
+          
+        />
+        <img
+          src="/images/hmr.png"
+          alt="HM Revenue and Customs"
+          
+        />
       </div>
     </>
   );
