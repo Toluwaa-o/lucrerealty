@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Roboto_Condensed, Roboto } from "next/font/google";
 import { listData, listDataII } from "@/utils/data";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const roboto_condensed = Roboto_Condensed({
   subsets: ["latin"],
@@ -163,22 +164,46 @@ export default function Home() {
         </ul>
       </div>
 
-      <div className="min-h-[40h] items-center overflow-scroll grid grid-flow-col auto-cols-[28%] gap-[30vw] p-4">
-        <img
-          src="/images/ico.png"
-          alt="Information Commissioner's Office"
-          
-        />
-        <img
-          src="/images/prs.png"
-          alt="Property Redress Scheme"
-          
-        />
-        <img
-          src="/images/hmr.png"
-          alt="HM Revenue and Customs"
-          
-        />
+      <div className="min-h-[35vh] items-center overflow-scroll grid grid-flow-col auto-cols-[28%] gap-[30vw] p-4">
+        <img src="/images/ico.png" alt="Information Commissioner's Office" />
+        <img src="/images/prs.png" alt="Property Redress Scheme" />
+        <img src="/images/hmr.png" alt="HM Revenue and Customs" />
+      </div>
+
+      <div className="min-h-[80vh] p-2 flex">
+        <span className="formBackground w-full text-white grid place-content-center p-6 gap-4">
+          <h3 className={`${roboto_condensed.className} text-center text-3xl uppercase`}>Access off market opportunities now</h3>
+          <p className={`${roboto.className} font-light tracking-wide`}>
+            Subscribe to our Newsletter to be part of our network and benefit
+            from monthly updates on the property market and new deals.
+          </p>
+          <form className="grid gap-3">
+          <input
+            name="fullName"
+            type="text"
+            placeholder="Full Name"
+            aria-label="Full Name"
+            className="p-3 font-serif placeholder:font-extralight"
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            aria-label="Email"
+            className="p-3 font-serif placeholder:font-extralight"
+          />
+          <input
+            name="mobileNumber"
+            type="number"
+            placeholder="Mobile Number"
+            className="p-3 font-serif placeholder:font-extralight"
+          />
+          <button className="flex gap-2 border items-center justify-center p-4">
+            <p className={`${roboto.className} text-[0.7rem] font-medium uppercase tracking-[3px]`}>Subscribe</p>
+            <AiOutlineArrowRight />
+          </button>
+          </form>
+        </span>
       </div>
     </>
   );

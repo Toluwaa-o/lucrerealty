@@ -104,3 +104,9 @@
   border-bottom: 30px solid white;
   border-right: 100vw solid transparent;
 }
+
+.formBackground {
+  background-image: url('/images/the-connected-team-is-an-efficient-team-CBF4ZM3.jpg');
+  background-position: center right;
+  background-size: cover;
+}
