@@ -5,6 +5,12 @@ import {
   BsTwitter,
   BsYoutube,
 } from "react-icons/bs";
+import { Roboto_Condensed } from "next/font/google";
+
+const roboto_condensed = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function LogoSection() {
   return (
